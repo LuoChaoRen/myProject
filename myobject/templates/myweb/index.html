@@ -1,0 +1,106 @@
+{% extends "myweb/base.html" %}
+{% load static from staticfiles %}
+
+{%block content%}
+<!-- banner -->
+		<div class="jumbotron clear clearfix">
+		  	<div class="container bg dis1 clearfix">
+		    	<div class="col-md-5 col-sm-4 col-sm-offset-7 col-md-offset-7 bersiz clearfix">
+					<p class="bersiz1">OnePlus 5</p>
+					<p class="bersiz2">高清双摄,就是清晰</p>
+					<p class="bersiz1"><span id="i2">¥</span>&nbsp;2999<span id="i1">起</span> </p>
+					<div class="bersiz3" >
+						<p style="margin-bottom: 0px;"><a href="">了解更多</a></p>
+					</div><br><br>
+					<p class="bersiz4">骁龙835处理器|6/8GB大内存|Dash闪充</p>
+					<div></div>
+				</div>	
+		  	</div>
+		  	<div class="container bg dis2">
+		    	<div class=" col-xs-5 col-xs-offset-7 bersizz">
+					<p class="bersiz11">OnePlus 5</p>
+					<p class="bersiz22">高清双摄,就是清晰</p>
+					<p class="bersiz11"><span id="i2">¥</span>&nbsp;2999<span id="i1">起</span> </p>
+					<div class="bersiz33">
+						<p style="margin-bottom: 0px;"><a href="">了解更多</a></p>
+					</div>
+					<p class="bersiz44">骁龙835处理器|6/8GB大内存|Dash闪充</p>
+					<div></div>
+				</div>	
+		  	</div>
+		</div>
+		<!-- 缩略图 -->
+		<div class="row clear clearfix">
+		    <div class="col-sm-12 col-md-4 clear clearfix cter">
+			    <h4 class="psion">开学好机"惠"</h4>
+		        <a href="#" class="thumbnail clear">
+		            <img src="{% static 'myweb/img/hui.png' %}"
+		                 alt='开学好机"惠"'>
+		        </a>
+		    </div>
+			<div class="col-sm-12 col-md-4 clear clearfix cter">
+		    	<h4 class="psion">手把手教你玩转 H2OS</h4>
+		        <a href="#" class="thumbnail clear">
+		            <img src="{% static 'myweb/img/phone.jpg' %}"
+		                 alt="手把手教你玩转 H2OS">
+		        </a>
+		    </div>
+			<div class="col-sm-12 col-md-4 clear clearfix cter">
+		    	<h4 class="psion">以旧换新</h4>
+		        <a href="#" class="thumbnail clear">
+		            <img src="{% static 'myweb/img/hand.jpg' %}"
+		                 alt="以旧换新">
+		        </a>
+		    </div>
+		</div>
+		<!-- 加入 -->
+		<div class="jumbotron clear">
+		  	<div class="container bg2 ">
+		    	<div class="col-md-4 col-md-offset-4 joincs">
+		    		<div><p class="joincs1">Shot on OnePlus</p></div>
+					<a href=""><div class="joincs2">我要参加 </div></a>
+				</div>	
+		  	</div>
+		</div>
+		<!-- Other -->
+		<div class="row clear mt">
+			<div class="col-md-11 " style="width: 100%">
+			    <div class="col-sm-6 col-md-4 cheng3 clearfix bgc">
+				    <div class="thumbnail clear ">
+					    <img src="{% static 'myweb/img/phone2.jpg' %}" alt="...">
+					    <div class="caption ml">
+					        <br>
+					        <h3>博客</h3>
+					        <p>有口皆碑月岩灰</p>
+					        <br>
+					        <br>
+					    </div>
+				    </div>
+			    </div>
+			    <div class="col-sm-6 col-md-4 cheng1 bgc">
+				    <div class="thumbnail clear" style="width: 100%">
+					    <img src="{% static 'myweb/img/phone3.jpg' %}" alt="...">
+					    <div class="caption ml">
+					        <br>
+					        <h3>新闻</h3>
+					        <p>OnePlus 5 的媒体评测汇总</p>
+					        <br>
+					        <br>
+					    </div>
+				    </div>
+			    </div>
+			    <div class="col-sm-6 col-md-4 cheng2" >
+				    <div class="thumbnail clear ">
+					    <img src="{% static 'myweb/img/fabu.jpg' %}" alt="...">
+					    <div class="caption ml">
+					        <br>
+					        <h3>视频</h3>
+					        <p>OnePlus 5 新品发布会</p>
+					        <br>
+					        <br>
+					    </div>
+				    </div>
+			    </div>    
+			</div>
+		</div>
+{%endblock%}

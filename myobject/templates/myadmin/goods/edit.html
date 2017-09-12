@@ -1,0 +1,80 @@
+{% extends "myadmin/base.html" %}
+
+{% block mainbody %}				
+	<h3>
+		会员信息管理
+	</h3>
+	<form action="{% url 'myadmin_goodsupdate' goods.id%}" id="edit-profile" class="form-horizontal" method="post">
+	 
+	 {% csrf_token %}
+		<fieldset>
+			<legend>修改商品信息</legend>
+	
+				<div class="control-group">
+					<label class="control-label" for="input01">类别</label>
+					<div class="controls">
+						<input type="text" name="typeid" class="input-xlarge" id="input01" value="{{ goods.typeid}}" />
+					</div>
+				</div>
+			
+				<div class="control-group">
+					<label class="control-label" for="input01">商品名</label>
+					<div class="controls">
+						<input type="text" name="goods" class="input-xlarge" id="input01" value="{{ goods.goods}}" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input01">厂家</label>
+					<div class="controls">
+						<input type="text" name="company" class="input-xlarge" id="input01" value="{{ goods.company}}" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input01">简介</label>
+					<div class="controls">
+						<input type="text" name="descr" class="input-xlarge" id="input01" value="{{ goods.descr}}" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input01">单价</label>
+					<div class="controls">
+						<input type="text" name="price" class="input-xlarge" id="input01" value="{{ goods.price}}" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input01">图片</label>
+					<div class="controls">
+						<input type="text" name="picname" class="input-xlarge" id="input01" value="{{ goods.picname}}" />
+					</div>
+				</div>	
+				<div class="control-group">
+					<label class="control-label" for="input01">状态</label>
+					<div class="controls">
+						<input type="text" name="state" class="input-xlarge" id="input01" value="{{ goods.state}}" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input01">库存</label>
+					<div class="controls">
+						<input type="text" name="store" class="input-xlarge" id="input01" value="{{ goods.store}}" />
+					</div>
+				</div>	
+				<div class="control-group">
+					<label class="control-label" for="input01">销售量</label>
+					<div class="controls">
+						<input type="text" name="num" class="input-xlarge" id="input01" value="{{ goods.num}}" />
+					</div>
+				</div>	
+				<div class="control-group">
+					<label class="control-label" for="input01">点击量</label>
+					<div class="controls">
+						<input type="text" name="clicknum" class="input-xlarge" id="input01" value="{{ goods.clicknum}}" />
+					</div>
+				</div>	
+	
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">确认</button> <button type="reset" class="btn">重置</button>
+			</div>
+		</fieldset>
+	</form>
+{% endblock %}

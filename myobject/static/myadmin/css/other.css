@@ -1,0 +1,38 @@
+#aa{
+	background:#F7F7F7;
+	border: 1px solid #C0C0C0;
+}
+#aa a{
+	text-decoration: none;
+	color: black;
+	
+}
+#bj th{
+	text-align: center;
+}
+#bj td{
+	text-align: center;
+}
+
+#x{
+	/*text-align: center;*/
+	padding-left: 25%;
+}
+#y{
+	padding-top: 5px;
+	padding-left: 0.5%;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+
+#z {
+/*	text-align: center;
+	margin:0 auto;*/
+	margin-left: 20%;
+}
+#a{
+	width: 60px;
+}
+#b{
+	margin-bottom: 10px;
+}

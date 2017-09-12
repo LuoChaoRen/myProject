@@ -1,0 +1,221 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" style="font-size:14px">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>首页</title>
+    <link rel="shortcut icon" href="{% static 'myweb/img/oneplus.ico' %}">
+    <link href="{% static 'myweb/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'myweb/css/public.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myweb/css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myweb/css/list.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myweb/css/xiangq.css' %}">
+
+
+    <script src="{% static 'myweb/js/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'myweb/js/bootstrap.min.js' %}"></script>
+</head> 
+<body>	
+	<div class="all clearfix">
+		<!-- 列表 -->
+		<nav class="navbar navbar-default bgg clear">
+		  <div class="container-fluid">
+		    <!-- 缩小界面出现buttom -->
+		    <div class="navbar-header pdd clearfix logopd">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="logo" href="{% url 'index'%}"><img src="{% static 'myweb/img/logo.png' %}"></a>
+		    </div>
+		    <div id="aa" class="clearfix " >
+		    	<ul class="nav navbar-nav pdd2 pdd "> 
+		            <li id="bb"><a href="#"><img src="{% static 'myweb/img/fdb.png' %}"> </a></li> 
+		            <li ><a href="{% url 'gouw' %}"><img src="{% static 'myweb/img/shopw.png' %}"> </a></li> 
+		           	<li ><a href="{% url 'dengl' %}"><img src="{% static 'myweb/img/icon_person.png' %}"> </a></li> 
+		        </ul>
+		    </div>
+		    <!-- 列表内容 放到button里-->
+		    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+		    	<div class="center-block clearfix bgg" >
+	      			<ul class="nav navbar-nav pdd pdd3" style="width: 100%">
+				        <li>
+				        	<a href="{% url 'xiangq' %}">OnePlus 3T</a>
+				        </li>
+				        <li>
+				        	<a href="{% url 'list' %}">商城</a>
+				        </li>
+				        <li>
+				        	<a href="#">服务</a>
+				        </li>
+				        <li>
+				        	<a href="#">博客</a>
+				        </li>
+				        <li>
+				        	<a href="#">论坛</a>
+				        </li>
+			      	</ul>
+		   		 </div><!-- /.navbar-collapse -->	    
+		  </div><!-- /.container-fluid -->
+		</nav>	
+		{%block content%}
+   		{%endblock%}
+		<!-- footer -->
+		<div class="row mt2 footerpc clear">
+				<div class="col-md-6 col-sm-12  clear">
+					<div class="col-md-4  col-sm-4 col-xs-12 mc">
+						<h4>一加产品</h4><br>
+						<p>OnePlus 5</p>
+						<p>一加手机 3T</p>
+						<p>一加手机 3</p>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 mc">
+						<h4>关于一加</h4><br>
+						<p>了解一加</p>
+						<p>加入一加</p>
+						<p>H2OS</p>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 mc">
+						<h4>服务支持</h4><br>
+						<p>自助服务</p>
+						<p>技术支持</p>
+						<p>售后服务</p>
+						<p>一加加多保</p>
+					</div>
+				</div>
+				<div class="col-md-6  clearfix  " id="footp">
+					<div class="col-md-6 col-md-offset-5  col-sm-4 col-sm-offset-4 clearfix" >
+						<h1>400-888-1111</h1>
+						<br>
+						<button>在线客服</button>
+						<br>
+						<br>
+						<span>周一至周日 9:00 - 22:00</span>
+					</div>
+				</div>
+				<div class="row footer2 clear">
+					<div class="col-md-7 col-sm-12" >
+						<span>© 2013-2017 OnePlus. All Rights Reserved. (粤ICP备13088308号-1)</span>
+						<img src="{% static 'myweb/img/cnnic.png' %}" alt="">
+					</div>
+					<div class="col-md-3 col-sm-12">
+						<div class="flag">
+							<span id="flagg">Change Location</span><img src="{% static 'myweb/img/flag.png' %}" alt="">
+						</div>
+					</div>	
+					<div class="col-md-12 col-sm-12 jhh">
+						<img src="{% static 'myweb/img/record.png' %}" alt=""><span>粤公网安备 44030402000178号</span>
+					</div>
+				</div>
+		</div>
+
+		<!-- 手机端 -->
+		<div class=" footermobile">
+			<nav class="navbar navbar-default navbarr clear3" role="navigation">
+				<div class="container-fluid"> 
+					<div class="navbar-header">
+						<span class="navitext">一加产品</span>
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target="#example-navbar-collapse">
+							<span class="sr-only">切换导航</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="example-navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="">OnePlus 5</a></li>
+							<li><a href="">一加手机 3T</a></li>
+							<li><a href="">一加手机 3</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<nav class="navbar navbar-default navbarr clear3" role="navigation">
+				<div class="container-fluid "> 
+					<div class="navbar-header ">
+						<span class="navitext">关于一加</span>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse2">
+							<span class="sr-only">切换导航</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="example-navbar-collapse2">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="">了解一加</a></li>
+							<li><a href="">加入一加</a></li>
+							<li><a href="">H2OS</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<nav class="navbar navbar-default navbarr clear3" role="navigation">
+				<div class="container-fluid "> 
+					<div class="navbar-header dsd">
+						<span class="navitext">服务支持</span>
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target="#example-navbar-collapse3">
+							<span class="sr-only">切换导航</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="example-navbar-collapse3">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="">自助服务</a>
+							</li>
+							<li>
+								<a href="">技术支持</a>
+							</li>
+							<li>
+								<a href="">售后服务</a>
+							</li>
+							<li>
+								<a href="">一加加多保</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row clear">
+				<div class="col-xs-12   clearfix clear clearfix" id="footp2">
+					<div class="col-xs-12 col-sm-3   clearfix" >
+						<h4>400-888-1111</h4>
+						<button>在线客服</button>
+						<span>周一至周日 9:00 - 22:00</span>
+					</div>
+				</div>
+			</div>
+			<div class="footer2 clear">
+				<div class="row clear">
+					<div class=" col-sm-12 col-xs-12" >
+						<span>© 2013-2017 OnePlus. All Rights Reserved. (粤ICP备13088308号-1)</span>
+						<img src="{% static 'myweb/img/cnnic.png' %}" alt="">
+					</div>
+					<div class=" col-sm-12 col-xs-12 jhh">
+						<img src="{% static 'myweb/img/record.png' %}" alt=""><span>粤公网安备 44030402000178号</span>
+					</div>
+					<div class=" col-sm-12 col-xs-12">
+						<div class="flag">
+							<span id="flagg">Change Location</span><img src="{% static 'myweb/img/flag.png' %}" alt="">
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="{% static 'myweb/js/public.js' %}"></script>
+
+</body>
+</html>

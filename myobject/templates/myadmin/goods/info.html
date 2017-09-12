@@ -1,0 +1,11 @@
+{% extends "myadmin/base.html" %}
+
+{% block mainbody %}                
+    <h2>
+        操作信息提示
+    </h2>
+
+        {{ info }}<a href="{% url 'myadmin_goodsindex' 1 %}">浏览商品</a>
+
+    
+{% endblock %}

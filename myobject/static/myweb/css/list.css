@@ -1,0 +1,61 @@
+/*公共部分*/
+@media(max-width:767px) { 
+    	 #a {
+    	position: absolute;
+    	top:0px;
+    	right: 72px;
+    	} }
+
+.thumbnail:hover{
+	box-shadow:0 0 1rem rgba(0,0,0,0.3);
+	padding: 0 0.03rem;
+	border-radius: 0;
+}
+.thumbnail{
+	border: 0;
+}
+
+
+/*banner*/
+ .itjob{
+  	overflow: hidden;
+    margin:0 auto;
+/*下面这两行会将你div中的图片对齐，一直在中间显示，缩小或放大都会居中--远标培训*/
+    display:flex;
+    justify-content:center;
+}
+/*list2*/
+.list2{
+	margin-top: 2rem
+}
+.mg img{
+	width: 100%
+}
+.mg{
+	/*margin:0 1rem;*/
+	/*padding-left: 0.6rem*/
+}
+/*list3*/
+.list3{
+	margin-top: 2.5rem;
+	background: #F0F0F0;
+	padding-top:1rem;
+}
+.bg1{
+	background: white;
+}
+
+.thumbnail a{
+	text-decoration: none;
+	list-style: none;
+	text-align: center;
+}
+.fiz{
+	font-size: 0.6rem;
+/*	font-family: 微软雅黑;*/
+}
+.zhoubian{
+	margin-top: 0.8rem;
+}
+
+

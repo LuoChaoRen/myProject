@@ -1,0 +1,18 @@
+{% extends "myweb/base.html" %}
+{% load static from staticfiles %}
+
+{%block content%}
+<!-- 购物车 -->
+	<div class="row clearfix   bggw">
+		<div class="col-md-12 huise">
+			<img src="{% static 'myweb/img/list.png' %}" width="100%">
+		</div>
+		<div class="row ding center-block">
+			<div class="col-md-12 clear black"></div>
+			<div class="gouwu  clear clearfix">
+			<div class="che "><img src="{% static 'myweb/img/che2.jpg' %}" width="100%" alt=""></div>
+			<div class=" center-block but center-block"><button>去购物</button></div>
+			</div>
+		</div>
+	</div>
+{%endblock %}

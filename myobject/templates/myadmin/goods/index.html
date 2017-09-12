@@ -1,0 +1,72 @@
+{% extends "myadmin/base.html" %}
+{# {% load dealwithtime %} #}
+{% block mainbody %}			
+	<h4>
+		商品信息管理
+	</h4>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr id="bj">
+				<th>id</th>
+				<th>类别</th>
+				<th>商品名</th>
+				<th>厂家</th>
+				<th>简介</th>
+				<th>单价</th>
+				<th>图片</th>
+				<th>状态</th>
+				<th>库存</th>
+				<th>被购买数量</th>
+				<th>点击量</th>
+				<th >时间</th>
+				<th >操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for stu in goodslist %}
+			<tr id="bj">
+				<td>{{ stu.id }}</td>
+				<td>{{ stu.typeid }}</td>
+				<td>{{ stu.goods }}</td>
+				<td>{{ stu.company }}</td>
+				<td>{{ stu.descr }}</td>
+				<td>{{ stu.price }}</td>
+				<td><img src="/static/goods/s_{{ stu.picname }}"/></td>
+				<td>{{ stu.state }}</td>
+				<td>{{ stu.store }}</td>
+				<td>{{ stu.num }}</td>
+				<td>{{ stu.clicknum }}</td>
+				
+				<td>{{ stu.addtime}}</td>
+				<td >
+				<button id="aa"><a href="{% url 'myadmin_goodsedit' stu.id %}">编辑</a></button>
+				<button id="aa"><a href="{% url 'myadmin_goodsdel' stu.id %}">删除</a></button>	
+				</td>
+			</tr>
+		
+ 		{% endfor %}
+			
+		</tbody>
+	</table>
+
+        <br/>
+
+	<div class="pagination">
+		<ul>
+			<li class="disabled"><a href="#">&laquo;</a></li>
+
+			{%for pindex in plist %}
+	        <li><a href={% url 'myadmin_usersindex'  pindex %} >{{pindex}}</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+	        {% endfor %}
+
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+
+
+            <div class="pagination">
+	             <ul>
+	            
+	            </ul>
+            </div>
+{% endblock %}
